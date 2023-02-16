@@ -1,0 +1,31 @@
+<body>
+    <div id="box" title="主体" class="asdfasdfadsfd">我爱你中国</div>
+    <script>
+
+        var div = document.getElementById("box");
+
+        //采用方式一进行set
+        div.aaaa = "1111";
+        console.log("div.aaaa = \"1111\"");
+        console.log("div.aaaa:" + div.aaaa);    //打印结果：1111。可以打印出来，但是不会出现在标签上
+        // console.log("div[aaaa]" + div[aaaa]);
+        // console.log(div.getAttribute("aaaa"));
+
+        console.log("------------");
+
+        //采用方式二进行set
+        div.setAttribute("bbbb", "2222");    //bbbb作为新增的属性，会出现在标签上
+        console.log(div.getAttribute("bbbb"));
+        // console.log("div.bbbb:" + div.bbbb);    //undefined
+        // console.log("div[bbbb]" + div[bbbb]);  //undefined
+
+        console.log("------------");
+
+        div[cccc] = "3333";
+        // console.log(div.getAttribute("cccc"));
+        // console.log("div.cccc:" + div.cccc);    
+        // console.log("div[cccc]" + div[cccc]);
+
+
+    </script>
+</body>

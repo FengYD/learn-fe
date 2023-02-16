@@ -1,0 +1,41 @@
+<body>
+    <img src="images/1.jpg" class="image-box" title="美女图片" alt="地铁一瞥" id="a1">
+
+    <script type="text/javascript">
+        
+        var myNode = document.getElementsByTagName("img")[0];
+
+        console.log("myNode.src:" + myNode.src);
+        console.log("myNode.className:" + myNode.className);    //注意，是className，不是class
+        console.log("myNode.title:" + myNode.title);
+
+        console.log("------------");
+
+        console.log("myNode[\"src\"]:" + myNode["src"]);
+        console.log("myNode[\"className\"]:" + myNode["className"]); //注意，是className，不是class
+        console.log("myNode[\"title\"]:" + myNode["title"]);
+
+        console.log("------------");
+
+        myNode.src = "images/2.jpg"   //修改src的属性值
+        myNode.className = "image2-box";  //修改class的name
+        console.log("myNode.src:" + myNode.src);
+        console.log("myNode.className:" + myNode.className);
+
+        console.log("------------");
+
+        myNode.setAttribute("src", "images/3.jpg");
+        myNode.setAttribute("class", "image3-box");
+        myNode.setAttribute("id", "你好");
+        console.log("myNode.src:" + myNode.src);
+        console.log("myNode.className:" + myNode.className);
+        console.log("myNode.id:" + myNode.id);
+
+        console.log("------------");
+
+        myNode.removeAttribute("id");
+        console.log("myNode.id:" + myNode.id);
+
+
+    </script>
+</body>
